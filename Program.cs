@@ -4,7 +4,7 @@ using Doist.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
-builder.Services.AddDbContext<TasksContext>(option => option.UseInMemoryDatabase("Doist")); // регистрация контекста бд для DI
+builder.Services.AddDbContext<ProblemContext>(option => option.UseInMemoryDatabase("Doist")); // регистрация контекста бд для DI
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();

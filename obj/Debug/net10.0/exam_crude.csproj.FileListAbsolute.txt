@@ -336,3 +336,4 @@ C:\Users\Andrey\Desktop\exam_crude\bin\Debug\net10.0\runtimes\win-arm64\native\M
 C:\Users\Andrey\Desktop\exam_crude\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Andrey\Desktop\exam_crude\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Andrey\Desktop\exam_crude\bin\Debug\net10.0\runtimes\win\lib\net9.0\System.Windows.Extensions.dll
+C:\Users\Andrey\Desktop\exam_crude\obj\Debug\net10.0\exam_crude.sourcelink.json
