@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.InMemory;
+using System.Text.Unicode;
 using Doist.Models;
+using System.Text.Encodings.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
@@ -22,6 +24,9 @@ if (app.Environment.IsDevelopment())
 }
 app.UseHttpsRedirection();
 app.MapControllers();
+app.MapFallbackToFile("index.html");
 app.UseAuthorization();
+app.UseStaticFiles(); // для обслуживания всех статических файлов
+app.UseDefaultFiles(); // позволяет обслуживать index.html по умолчанию 
 app.Run();
 

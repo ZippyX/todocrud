@@ -5,6 +5,8 @@ using Doist.Models;
 namespace Doist.Controllers;
 
 
+
+
 [Route("api/[controller]")] // це шо 
 [ApiController] // забыл добавить )0)
 
@@ -17,7 +19,7 @@ public class ProblemController : ControllerBase
         _context = context;
     }
 
-    [HttpGet]
+    [HttpGet] // endpoint
     public async Task<ActionResult<IEnumerable<Problem>>> GetAllProblems()
     {
         return await _context.Problems.ToListAsync();
@@ -30,7 +32,7 @@ public class ProblemController : ControllerBase
         return CreatedAtAction(nameof(GetProblem),new {id = task.Id},task);
 
     }
-    [HttpGet("Id")] // forgot добавить blyять
+    [HttpGet("Id")] // forgot добавить blyять; endpoint
     public async Task<ActionResult<Problem>> GetProblem(int id)
     {
         var task = await _context.Problems.FindAsync(id);
@@ -40,7 +42,7 @@ public class ProblemController : ControllerBase
         }
         return task;
     }
-    [HttpDelete("id")]
+    [HttpDelete("id")] // endpoint
     public async Task<ActionResult> RemoveProblem(int id)
     {
         var task = await _context.Problems.FindAsync(id);
@@ -54,7 +56,7 @@ public class ProblemController : ControllerBase
         
 
     } 
-    [HttpPut("id")]
+    [HttpPut("id")] //endpoint
     public async Task<ActionResult<Problem>> UpdateProblem(Problem task,int id)
     {
         var oldTask = await _context.Problems.FindAsync(id);
@@ -68,10 +70,17 @@ public class ProblemController : ControllerBase
         return Ok();
     }
 }
-/*
 
+
+
+/*
 get
 post
 put
 delete
+*
+В теории, ендпоин называется именно так, т.к. это такой URL, по которому на запрос идёт ответ, т.е. диалог заканчивается
+все получили, что хотели( ну или не совсем)
+
 */
+
