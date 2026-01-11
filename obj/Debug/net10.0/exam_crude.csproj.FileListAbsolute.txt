@@ -341,4 +341,5 @@ C:\Users\Andrey\Desktop\exam_crude\bin\Debug\net10.0\exam_crude.staticwebassets.
 C:\Users\Andrey\Desktop\exam_crude\obj\Debug\net10.0\compressed\divei2vbo6-{0}-3gespobwyb-3gespobwyb.gz
 C:\Users\Andrey\Desktop\exam_crude\obj\Debug\net10.0\compressed\c51fao8ckc-{0}-olqrz1n3ey-olqrz1n3ey.gz
 C:\Users\Andrey\Desktop\exam_crude\obj\Debug\net10.0\compressed\it5wmgx6bz-{0}-sy2qii2yug-sy2qii2yug.gz
-C:\Users\Andrey\Desktop\exam_crude\obj\Debug\net10.0\compressed\lrzec04tzf-{0}-p0ccgp6m2p-p0ccgp6m2p.gz
+C:\Users\Andrey\Desktop\exam_crude\obj\Debug\net10.0\compressed\7caugkky3t-{0}-keb1bnj6sd-keb1bnj6sd.gz
+C:\Users\Andrey\Desktop\exam_crude\obj\Debug\net10.0\compressed\lrzec04tzf-{0}-6bu2csou36-6bu2csou36.gz

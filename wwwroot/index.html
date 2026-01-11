@@ -25,8 +25,7 @@
             <button type = "button" onclick= "closeInput()" aria-label="Close">&times;;</button>
         </form>
     </div>
-    <p id ="Счётчик "></p>
-
+    <p id ="counter "></p>
     <table>
             <tr>
                 <th>Задача выполнена?</th>
@@ -35,12 +34,12 @@
                 <th></th>
 
             </tr>
-            <tbody id= "todos"></tbody>
+            <tbody id= "prob"></tbody>
     </table>
 
-    <script src = "/wwwroot/js/site.js" asp-append-version = "true"></script>
+    <script src = "./js/site.js" asp-append-version = "true"></script>
     <script type="text/javascript">
-        getItems();
+        GetItems();
     </script>
 </body>
 </html>
