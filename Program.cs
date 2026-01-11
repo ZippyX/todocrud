@@ -12,7 +12,7 @@ builder.Services.AddDbContext<ProblemContext>(option => option.UseInMemoryDataba
 builder.Services.AddOpenApi();
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline. 
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
@@ -28,5 +28,6 @@ app.MapFallbackToFile("index.html");
 app.UseAuthorization();
 app.UseStaticFiles(); // для обслуживания всех статических файлов
 app.UseDefaultFiles(); // позволяет обслуживать index.html по умолчанию 
+app.UseWelcomePage(); // лишь на третий день изучения я узнал как включить стартовую страницу
 app.Run();
 
