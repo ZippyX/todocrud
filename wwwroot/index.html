@@ -1,7 +1,46 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <link rel = "stylesheet" href = "./css/style.css"/>
+</head>
+<body>
+    <h1>Мой СПОД</h1>
+    <h3>Создать</h3>
+    <form onsubmit= "addItem(event)">
+        <input type = "text" id="add-name" placeholder="Новая задача">
+        <input type = "submit" value = "Add">
+    </form>
 
 
-    <body>
+    <div id = "editForm">
+        <h3>Изменить задачу</h3>
+        <form onsubmit="updateItem(event)">
+            <input type = "hidden" id = "edit-id">
+            <input type = "checkbox" id ="edit-IsComplete">
+            <input type = "text" id = "edit-name">
+            <input type = "submit" value = "Save">
+            <button type = "button" onclick= "closeInput()" aria-label="Close">&times;;</button>
+        </form>
+    </div>
+    <p id ="Счётчик "></p>
 
-    </body>
+    <table>
+            <tr>
+                <th>Задача выполнена?</th>
+                <th>Название задачи</th>
+                <th>Описание задачи</th>
+                <th></th>
+
+            </tr>
+            <tbody id= "todos"></tbody>
+    </table>
+
+    <script src = "/wwwroot/js/site.js" asp-append-version = "true"></script>
+    <script type="text/javascript">
+        getItems();
+    </script>
+</body>
 </html>

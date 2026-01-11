@@ -27,7 +27,6 @@ app.MapControllers();
 app.MapFallbackToFile("index.html");
 app.UseAuthorization();
 app.UseStaticFiles(); // для обслуживания всех статических файлов
-app.UseDefaultFiles(); // позволяет обслуживать index.html по умолчанию 
-app.UseWelcomePage(); // лишь на третий день изучения я узнал как включить стартовую страницу
+app.UseDefaultFiles(); // позволяет обслуживать index.html по умолчанию  // лишь на третий день изучения я узнал как включить стартовую страницу
 app.Run();
 

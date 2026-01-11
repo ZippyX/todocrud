@@ -338,4 +338,7 @@ C:\Users\Andrey\Desktop\exam_crude\bin\Debug\net10.0\runtimes\win-x86\native\Mic
 C:\Users\Andrey\Desktop\exam_crude\bin\Debug\net10.0\runtimes\win\lib\net9.0\System.Windows.Extensions.dll
 C:\Users\Andrey\Desktop\exam_crude\obj\Debug\net10.0\exam_crude.sourcelink.json
 C:\Users\Andrey\Desktop\exam_crude\bin\Debug\net10.0\exam_crude.staticwebassets.runtime.json
-C:\Users\Andrey\Desktop\exam_crude\obj\Debug\net10.0\compressed\lrzec04tzf-{0}-0kbb7uuypt-0kbb7uuypt.gz
+C:\Users\Andrey\Desktop\exam_crude\obj\Debug\net10.0\compressed\divei2vbo6-{0}-3gespobwyb-3gespobwyb.gz
+C:\Users\Andrey\Desktop\exam_crude\obj\Debug\net10.0\compressed\c51fao8ckc-{0}-olqrz1n3ey-olqrz1n3ey.gz
+C:\Users\Andrey\Desktop\exam_crude\obj\Debug\net10.0\compressed\it5wmgx6bz-{0}-sy2qii2yug-sy2qii2yug.gz
+C:\Users\Andrey\Desktop\exam_crude\obj\Debug\net10.0\compressed\lrzec04tzf-{0}-p0ccgp6m2p-p0ccgp6m2p.gz
