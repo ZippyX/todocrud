@@ -7,7 +7,7 @@
     <link rel = "stylesheet" href = "./css/style.css"/>
 </head>
 <body>
-    <h1>Мой СПОД</h1>
+    <h1>Мой СПОУ</h1>
     <h3>Создать</h3>
     <form onsubmit= "addItem(event)">
         <input type = "text" id="add-name" placeholder="Новая задача">
@@ -19,13 +19,13 @@
         <h3>Изменить задачу</h3>
         <form onsubmit="updateItem(event)">
             <input type = "hidden" id = "edit-id">
-            <input type = "checkbox" id ="edit-IsComplete">
+            <input type = "checkbox" id ="edit-isComplete">
             <input type = "text" id = "edit-name">
             <input type = "submit" value = "Save">
             <button type = "button" onclick= "closeInput()" aria-label="Close">&times;;</button>
         </form>
     </div>
-    <p id ="counter "></p>
+    <p id ="counter"></p>
     <table>
             <tr>
                 <th>Задача выполнена?</th>
@@ -39,7 +39,7 @@
 
     <script src = "./js/site.js" asp-append-version = "true"></script>
     <script type="text/javascript">
-        GetItems();
+        getItems();
     </script>
 </body>
 </html>

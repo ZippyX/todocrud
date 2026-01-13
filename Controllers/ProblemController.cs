@@ -32,7 +32,7 @@ public class ProblemController : ControllerBase
         return CreatedAtAction(nameof(GetProblem),new {id = task.Id},task);
 
     }
-    [HttpGet("Id")] // forgot добавить blyять; endpoint
+    [HttpGet("{id}")] // forgot добавить blyять; endpoint
     public async Task<ActionResult<Problem>> GetProblem(int id)
     {
         var task = await _context.Problems.FindAsync(id);
@@ -42,31 +42,30 @@ public class ProblemController : ControllerBase
         }
         return task;
     }
-    [HttpDelete("id")] // endpoint
+    [HttpDelete("{id}")]
     public async Task<ActionResult> RemoveProblem(int id)
     {
         var task = await _context.Problems.FindAsync(id);
         if(task != null)
         {
             _context.Problems.Remove(task);
+            _context.SaveChanges();
             return Ok();
         }
-        _context.SaveChanges();
         return NotFound();
-        
 
     } 
-    [HttpPut("id")] //endpoint
-    public async Task<ActionResult<Problem>> UpdateProblem(Problem task,int id)
+    [HttpPut("{id}")] //endpoint
+    public async Task<ActionResult<Problem>> UpdateProblem(int id, [FromBody] Problem task)
     {
         var oldTask = await _context.Problems.FindAsync(id);
-        if(oldTask.Equals(null))
+        if(oldTask == null)
         {
-            return NotFound();
+            return NotFound();  
         }
         oldTask.Name = task.Name;
         oldTask.Description = task.Description;
-        _context.SaveChanges();
+        await _context.SaveChangesAsync();
         return Ok();
     }
 }

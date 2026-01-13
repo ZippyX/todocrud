@@ -10,6 +10,16 @@ builder.Services.AddDbContext<ProblemContext>(option => option.UseInMemoryDataba
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddCors(options =>
+{
+    
+    options.AddPolicy("AllowAll",policy =>
+    {policy
+       .AllowAnyOrigin()
+       .AllowAnyMethod()
+       .AllowAnyHeader(); 
+    });
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline. 
@@ -22,11 +32,18 @@ if (app.Environment.IsDevelopment())
     });
 
 }
-app.UseHttpsRedirection();
+
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
+// **Важно:** UseRouting до CORS и Authorization
+app.UseRouting();
+
+app.UseCors("AllowAll");
+app.UseAuthorization();
+
+// Контроллеры и fallback
 app.MapControllers();
 app.MapFallbackToFile("index.html");
-app.UseAuthorization();
-app.UseStaticFiles(); // для обслуживания всех статических файлов
-app.UseDefaultFiles(); // позволяет обслуживать index.html по умолчанию  // лишь на третий день изучения я узнал как включить стартовую страницу
-app.Run();
 
+app.Run();
